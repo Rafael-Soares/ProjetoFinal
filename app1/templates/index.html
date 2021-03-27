@@ -1,12 +1,17 @@
+<!-- ADICIONANDO CÓDIGO PYTHON PARA UTILIZAR ELEMENTOS ESTÁTICOS -->
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Aprender é Crescer</title>
 </head>
 <body>
-    <h2>aqui fica nossa página html</h2>
+    <h1>Sejam Bem Vindos ao <span>Aprender é Crescer!</span></h1>
+    <h4>Venham aprender conosco, temos os melhores professores e os melhores planos para VOCÊ.</h4>
+    <p>Essa página está em manuteção, volte mais tarde...</p>
 </body>
 </html>
