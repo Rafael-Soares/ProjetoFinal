@@ -64,8 +64,12 @@ WSGI_APPLICATION = 'cursinho.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3', #ALTERAR SQLITE3 PARA POSTGRESQL
+        'NAME': BASE_DIR / 'db.sqlite3',  #COLOCAR NOME DO BANCO DE DADOS AQUI, QUANDO FOR FEITO
+        #'USER':,                         #ADICIONAR O USER DO POSTGRESQL
+        #'PASSWORD':,                     #ADICIONAR O PASSWORD DO POSTGRESQL
+        #'HOST':,                         #ADICIONAR O HOST
+
     }
 }
 
