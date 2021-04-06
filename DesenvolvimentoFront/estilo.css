@@ -1,0 +1,14 @@
+*{
+margin: 0px;
+font-family: 'Roboto', sans-serif;
+}
+
+/**Home**/
+.home{
+    background-color:#27BA81 ;
+
+}
+
+.home a{
+    text-decoration: none;
+}
