@@ -37,17 +37,25 @@
     </section>
     <br>
     <section id = "servicos" >
+        
         <center><h3>Serviços</h3></center>
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
-        <h4>Título modificável:</h4> <!-- dps alterar com código python para o BD -->
-        <p>Ladainha modificável pelo admin</p></center> <!-- dps alterar com código python para o BD -->
+        {% for servicos in servi %}
+        <h4>{{servi.nome}}</h4> <!-- dps alterar com código python para o BD -->
+        <p>{{servi.descrição_do_servico}}</p></center> <!-- dps alterar com código python para o BD -->
+        <p>Custo do serviço</p>
+        <p>{{servi.preço}}</p>
+        {% endfor %}
+
     </section>
     <br>
     <section id = "portifolio" >
         <center><h3>Portifólio</h3></center>
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
         <h4>Título modificável:</h4> <!-- dps alterar com código python para o BD -->
-        <p>Ladainha modificável pelo admin</p></center> <!-- dps alterar com código python para o BD -->
+        {% for port in portifo %}
+        <p>{{port.descricao_port}}</p></center> <!-- dps alterar com código python para o BD -->
+        {% endfor %}
     </section>
     <br>
     <section id = "contatos" >
@@ -57,7 +65,7 @@
                 <p>Celular:</p> <!-- dps alterar com código python para o BD -->
                 <p>Telefone</p> <!-- dps alterar com código python para o BD -->
                 <p>Redes Sociais</p></center> <!-- dps alterar com código python para o BD -->
-        {% endfor%}
+        {% endfor %}
     </section>
 </body>
 </html>
