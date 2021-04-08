@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+
     <header>
         <span>
             <p>LOGO</p>
@@ -21,51 +22,72 @@
             <li><a href="#">CONTATOS</a></li>
         </ul>
     </header>
+    
     <br>
+    
     <section id = "header-home" >
-            <center><h3>O CAMINHO PARA A SUA APROVAÇÃO</h3></center> <!-- dps alterar com código python para o BD -->
+            {% for valoresPainel in painel %}
+            <center><h2>{{ valoresPainel.sloganPainel }}</h2> <!-- dps alterar com código python para o BD -->
+            <img src="{{ valoresPainel.imagePainel }}" alt=""></p>
+            </center>
+            {% endfor %} 
     </section>
     <br>
+    
     <section id = "quem-somos" >
-        
         <center><h3>Quem Somos</h3></center>
-        {% for desc in quem %}
+        {% for quemSms in quemSomos %}
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
-        <h4>{{ desc.titulo }}</h4> <!-- dps alterar com código python para o BD -->
-        <p>{{ desc.apresentacao }}</p>
+        <h4>{{ quemSms.titulo }}</h4> <!-- dps alterar com código python para o BD -->
+        <p>{{ quemSms.apresentacao }}</p>
         {% endfor %}</center>
     </section>
+    
     <br>
+    
     <section id = "servicos" >
-        
         <center><h3>Serviços</h3></center>
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
-        {% for servicos in servi %}
-        <h4>{{servi.nome}}</h4> <!-- dps alterar com código python para o BD -->
-        <p>{{servi.descrição_do_servico}}</p></center> <!-- dps alterar com código python para o BD -->
+        {% for servicos in servico %}
+        <h4>{{servicos.nome}}</h4> <!-- dps alterar com código python para o BD -->
+        <p>{{servicos.descrição_do_servico}}</p> <!-- dps alterar com código python para o BD -->
         <p>Custo do serviço</p>
-        <p>{{servi.preço}}</p>
+        <p>{{servicos.preço}}</p></center>
         {% endfor %}
-
     </section>
+
     <br>
+    
     <section id = "portifolio" >
         <center><h3>Portifólio</h3></center>
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
         <h4>Título modificável:</h4> <!-- dps alterar com código python para o BD -->
-        {% for port in portifo %}
-        <p>{{port.descricao_port}}</p></center> <!-- dps alterar com código python para o BD -->
+        {% for v_Portifolio in portifolio %}
+        <p>{{v_Portifolio.descricaoPortifolio}}</p></center> <!-- dps alterar com código python para o BD -->
         {% endfor %}
     </section>
+
     <br>
+    
     <section id = "contatos" >
-        {% for contato in cont %}
+        {% for contatos in contato %}
         <center><h3>Contatos</h3></center> <!-- dps alterar com código python para o BD -->
-        <center><p>Email: {{ contato.email }}</p> <!-- dps alterar com código python para o BD -->
-                <p>Celular:</p> <!-- dps alterar com código python para o BD -->
-                <p>Telefone</p> <!-- dps alterar com código python para o BD -->
-                <p>Redes Sociais</p></center> <!-- dps alterar com código python para o BD -->
+        <center><p>Email: {{ contatos.email }}</p> <!-- dps alterar com código python para o BD -->
+                <p>Celular: {{ contatos.celular }}</p> <!-- dps alterar com código python para o BD -->
+                <p>Telefone: {{ contatos.telefone }}</p></center> <!-- dps alterar com código python para o BD -->
         {% endfor %}
     </section>
+
+    <br>
+
+    <section id = "redes-sociais" >
+        {% for redes_sociais in redesSociais %}
+            <center>
+                <h4>{{ redes_sociais.nomeRS }}</h4>
+                <p>{{ redes_sociais.link }}</p>
+            </center>
+        {% endfor %}
+    </section>
+
 </body>
 </html>
