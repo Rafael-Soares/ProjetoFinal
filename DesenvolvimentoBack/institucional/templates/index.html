@@ -28,7 +28,7 @@
     <section id = "header-home" >
             {% for valoresPainel in painel %}
             <center><h2>{{ valoresPainel.sloganPainel }}</h2> <!-- dps alterar com código python para o BD -->
-            <img src="{{ valoresPainel.imagePainel }}" alt=""></p>
+            <img src="{{ valoresPainel.imagePainel.url }}" alt=""></p>
             </center>
             {% endfor %} 
     </section>

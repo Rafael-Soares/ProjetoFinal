@@ -3,7 +3,7 @@ from datetime import datetime
 
 class painel(models.Model):
     sloganPainel = models.CharField(max_length=255)
-    imagePainel = models.ImageField(upload_to='pagina/static/imagens/', blank=True)
+    imagePainel = models.ImageField(upload_to='imagens/', blank=True)
 
 class quemSomos(models.Model):
     titulo = models.CharField(max_length=50)
