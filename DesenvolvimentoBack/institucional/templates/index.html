@@ -36,11 +36,14 @@
     
     <section id = "quem-somos" >
         <center><h3>Quem Somos</h3></center>
+        <center>
         {% for quemSms in quemSomos %}
-        <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
-        <h4>{{ quemSms.titulo }}</h4> <!-- dps alterar com código python para o BD -->
-        <p>{{ quemSms.apresentacao }}</p>
-        {% endfor %}</center>
+            <p>Imagem modificável pelo adm</p>
+            <img src="{{ quemSms.imageQuemSomos.url }}" alt=""> <!-- dps alterar com código python para o BD -->
+            <h4>{{ quemSms.titulo }}</h4> <!-- dps alterar com código python para o BD -->
+            <p>{{ quemSms.apresentacao }}</p>
+        {% endfor %}
+        </center>
     </section>
     
     <br>
@@ -49,6 +52,7 @@
         <center><h3>Serviços</h3></center>
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
         {% for servicos in servico %}
+        <img src="{{ servicos.imageServico.url }}" alt="">
         <h4>{{servicos.nome}}</h4> <!-- dps alterar com código python para o BD -->
         <p>{{servicos.descrição_do_servico}}</p> <!-- dps alterar com código python para o BD -->
         <p>Custo do serviço</p>
@@ -61,8 +65,9 @@
     <section id = "portifolio" >
         <center><h3>Portifólio</h3></center>
         <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
-        <h4>Título modificável:</h4> <!-- dps alterar com código python para o BD -->
         {% for v_Portifolio in portifolio %}
+        <img src="{{ v_Portifolio.imagePortifolio.url }}" alt="">
+        <h4>Título modificável:</h4> <!-- dps alterar com código python para o BD -->
         <p>{{v_Portifolio.descricaoPortifolio}}</p></center> <!-- dps alterar com código python para o BD -->
         {% endfor %}
     </section>

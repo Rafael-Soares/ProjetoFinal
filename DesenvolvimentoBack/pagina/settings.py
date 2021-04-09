@@ -67,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'aprender_e_crescer',
         'USER': 'postgres',
-        'PASSWORD': '15022001ke', #     15022001ke      treineeEject
+        'PASSWORD': 'treineeEject', #     15022001ke      treineeEject
         'HOST': 'localhost'
     }
 }
@@ -113,7 +113,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pagina/static')
 ]
-
+#configuração para uso das imagens
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
