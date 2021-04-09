@@ -15,11 +15,11 @@
             <p>LOGO</p>
         </span>
         <ul id = "header-mainnav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">QUEM SOMOS</a></li>
-            <li><a href="#">SERVÇOS</a></li>
-            <li><a href="#">PORTIFÓLIO</a></li>
-            <li><a href="#">CONTATOS</a></li>
+            <li><a href="{% static 'index' %}">HOME</a></li>
+            <li><a href="#quem-somos">QUEM SOMOS</a></li>
+            <li><a href="#servicos">SERVÇOS</a></li>
+            <li><a href="#portifolio">PORTIFÓLIO</a></li>
+            <li><a href="#contatos">CONTATOS</a></li>
         </ul>
     </header>
     
@@ -37,12 +37,11 @@
     <section id = "quem-somos" >
         <center><h3>Quem Somos</h3></center>
         <center>
-        {% for quemSms in quemSomos %}
             <p>Imagem modificável pelo adm</p>
-            <img src="{{ quemSms.imageQuemSomos.url }}" alt=""> <!-- dps alterar com código python para o BD -->
-            <h4>{{ quemSms.titulo }}</h4> <!-- dps alterar com código python para o BD -->
-            <p>{{ quemSms.apresentacao }}</p>
-        {% endfor %}
+            <img src="{{ quemSomos.imageQuemSomos.url }}" alt=""> <!-- dps alterar com código python para o BD -->
+            <h4>{{ quemSomos.titulo }}</h4> <!-- dps alterar com código python para o BD -->
+            <p>{{ quemSomos.apresentacao }}</p>
+        
         </center>
     </section>
     

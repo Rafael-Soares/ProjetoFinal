@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import quemSomos, contato, redesSociais, servicos, portifolio, painel
+from .models import * #esse asteristíco importa todas as classes do models
 # Register your models here.
-
+    
 admin.site.register(quemSomos)
 admin.site.register(contato)
 admin.site.register(redesSociais)
