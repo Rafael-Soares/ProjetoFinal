@@ -21,8 +21,9 @@ class servicos(models.Model):
 class portifolio(models.Model):
     descricaoPortifolio = models.TextField('Descrição')
     imagePortifolio = models.ImageField('Imagem', upload_to='imagens/', blank=True)
+    preco = models.IntegerField()
 
-class contato(models.Model):
+class contato(models.Model): #não usaremos modelos
     email = models.CharField('E-mail', max_length=255) 
     telefone = models.CharField('Telefone', max_length=12)
     celular = models.CharField('Celular', max_length=13)
