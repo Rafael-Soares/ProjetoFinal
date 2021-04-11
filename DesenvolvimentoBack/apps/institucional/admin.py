@@ -4,7 +4,6 @@ from .models import * #esse asteristíco importa todas as classes do models
     
 admin.site.register(quemSomos)
 admin.site.register(contato)
-admin.site.register(redesSociais)
 admin.site.register(servicos)
 admin.site.register(portifolio)
 admin.site.register(painel)

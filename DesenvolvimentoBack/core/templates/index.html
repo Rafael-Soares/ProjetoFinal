@@ -26,9 +26,9 @@
     <br>
     
     <section id = "header-home" >
-            {% for valoresPainel in painel %}
-            <center><h2>{{ valoresPainel.sloganPainel }}</h2> <!-- dps alterar com código python para o BD -->
-            <img src="{{ valoresPainel.imagePainel.url }}" alt=""></p>
+            {% for Painel in painel %}
+            <center><h2>{{ Painel.sloganPainel }}</h2> <!-- dps alterar com código python para o BD -->
+            <img src="{{ Painel.imagePainel.url }}" alt=""></p>
             </center>
             {% endfor %} 
     </section>
@@ -37,7 +37,6 @@
     <section id = "quem-somos" >
         <center><h3>Quem Somos</h3></center>
         <center>
-            <p>Imagem modificável pelo adm</p>
             <img src="{{ quemSomos.imageQuemSomos.url }}" alt=""> <!-- dps alterar com código python para o BD -->
             <h4>{{ quemSomos.titulo }}</h4> <!-- dps alterar com código python para o BD -->
             <p>{{ quemSomos.apresentacao }}</p>
@@ -49,7 +48,6 @@
     
     <section id = "servicos" >
         <center><h3>Serviços</h3></center>
-        <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
         {% for servicos in servico %}
         <img src="{{ servicos.imageServico.url }}" alt="">
         <h4>{{servicos.nome}}</h4> <!-- dps alterar com código python para o BD -->
@@ -63,19 +61,18 @@
     
     <section id = "portifolio" >
         <center><h3>Portifólio</h3></center>
-        <center><p>Imagem modificável pelo admin</p> <!-- dps alterar com código python para o BD -->
-        {% for v_Portifolio in portifolio %}
-        <img src="{{ v_Portifolio.imagePortifolio.url }}" alt="">
+        {% for Portifolio in portifolio %}
+        <img src="{{ Portifolio.imagePortifolio.url }}" alt="">
         <h4>Título modificável:</h4> <!-- dps alterar com código python para o BD -->
-        <p>{{v_Portifolio.descricaoPortifolio}}</p></center> <!-- dps alterar com código python para o BD -->
+        <p>{{Portifolio.descricaoPortifolio}}</p></center> <!-- dps alterar com código python para o BD -->
         {% endfor %}
     </section>
 
     <br>
     
     <section id = "contatos" >
-        {% for contatos in contato %}
         <center><h3>Contatos</h3></center> <!-- dps alterar com código python para o BD -->
+        {% for contatos in contato %}
         <center><p>Email: {{ contatos.email }}</p> <!-- dps alterar com código python para o BD -->
                 <p>Celular: {{ contatos.celular }}</p> <!-- dps alterar com código python para o BD -->
                 <p>Telefone: {{ contatos.telefone }}</p></center> <!-- dps alterar com código python para o BD -->
@@ -83,15 +80,27 @@
     </section>
 
     <br>
-
-    <section id = "redes-sociais" >
-        {% for redes_sociais in redesSociais %}
-            <center>
-                <h4>{{ redes_sociais.nomeRS }}</h4>
-                <p>{{ redes_sociais.link }}</p>
-            </center>
-        {% endfor %}
-    </section>
+    <br>
+    <!--  FORM DE ENVIO  -->
+    <center><form id="contato" action="" method="post">
+        <label for="nome">
+            Nome:
+            <input type="text" name="nome" id="nome">
+        </label>
+        <label for="email">
+            Email:
+            <input type="text" name="email" id="email">
+        </label>
+        <label for="assunto">
+            Assunto:
+            <input type="text" name="assunto" id="assunto">
+        </label>
+        <label for="mensagem">
+            Mensagem:
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+    </form></center>
 
 </body>
 </html>
