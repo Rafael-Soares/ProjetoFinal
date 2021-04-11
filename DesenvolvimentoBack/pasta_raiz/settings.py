@@ -38,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'pagina.urls'
+ROOT_URLCONF = 'pasta_raiz.urls'
 
 TEMPLATES = [
     {
@@ -56,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pagina.wsgi.application'
+WSGI_APPLICATION = 'pasta_raiz.wsgi.application'
 
 
 # Database

@@ -1,0 +1,8 @@
+# pip install -r requirements.txt
+
+Django~=2.2.4   # INSTALAÇÃO DO DJANGO
+Pillow          # PARA UTILIZAR O IMAGEFIELD
+pylint          # UTILIZADO PARA VERICAÇÃO DE ERROS
+pylint-django   # UTILIZADO PARA VERICAÇÃO DE ERROS
+psycopg2        # PARA COMUNICAÇÃO COM POSTGRESQL
+psycopg2-binary # PARA COMUNICAÇÃO COM POSTGRESQL

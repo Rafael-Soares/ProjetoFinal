@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pagina.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pasta_raiz.settings')
 
 application = get_asgi_application()
