@@ -67,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'aprender_e_crescer',
         'USER': 'postgres',
-        'PASSWORD': 'treineeEject', # SENHAS ->  KEDSON -> 15022001ke    RAFAEL ->  treineeEject
+        'PASSWORD': '15022001ke', # SENHAS ->  KEDSON -> 15022001ke    RAFAEL ->  treineeEject
         'HOST': 'localhost'
     }
 }
@@ -120,18 +120,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # CONFIGURAÇÃO PARA ENVIO DE EMAILS
-'''
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER = CRIAR UM EMAIL PARA COLOCAR AQUI
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = SENHA DO EMAIL CRIADO
-
-É NECESSÁRIO AINDA CONFIGURAR A CONTA DO GMAIL QUE FOR CRIADA.
-
-'''
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "aprenderecrescer30@gmail.com"
+EMAIL_HOST_PASSWORD = "treineeEject"
+CONTACT_EMAIL = "aprenderecrescer30@gmail.com"
+DEFAULT_FROM_EMAIL = "aprenderecrescer30@gmail.com"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

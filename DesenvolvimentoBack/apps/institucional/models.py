@@ -5,7 +5,7 @@ class home(models.Model):
     slogan_home = models.CharField('Slogan do Home', max_length=255, blank=True)
     imageHome = models.ImageField('Imagem', upload_to='imagens/', blank=True)
     descricao_card = models.TextField('Descrição do Card', blank=True) 
-    preco_card = models.IntegerField('Preço do Card', default=0)
+    preco_card = models.FloatField('Preço do Card', default=0)
     data_modificacao = models.DateTimeField('Data de modificação', default=datetime.now, blank=True)
 
 class quemSomos(models.Model):
@@ -37,6 +37,6 @@ class pacotes(models.Model):
 
 #class contato(models.Model): #não usaremos modelos
 #    email = models.CharField('E-mail', max_length=255, blank=True) 
-#   telefone = models.CharField('Telefone', max_length=12, blank=True)
+#    telefone = models.CharField('Telefone', max_length=12, blank=True)
 #    celular = models.CharField('Celular', max_length=13, blank=True)
 #    data_modificacao = models.DateTimeField('Data de modificação', default=datetime.now, blank=True)
