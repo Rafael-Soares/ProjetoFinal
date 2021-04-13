@@ -26,11 +26,9 @@
     <br>
     
     <section id = "header-home" >
-            {% for Painel in painel %}
-            <center><h2>{{ Painel.sloganPainel }}</h2> <!-- dps alterar com código python para o BD -->
-            <img src="{{ Painel.imagePainel.url }}" alt=""></p>
-            </center>
-            {% endfor %} 
+            <center><h2>{{ Home.slogan_home }}</h2> <!-- dps alterar com código python para o BD -->
+            <img src="{{ Home.imageHome.url }}" alt=""></p>
+            </center>    
     </section>
     <br>
     
@@ -38,8 +36,8 @@
         <center><h3>Quem Somos</h3></center>
         <center>
             <img src="{{ quemSomos.imageQuemSomos.url }}" alt=""> <!-- dps alterar com código python para o BD -->
-            <h4>{{ quemSomos.titulo }}</h4> <!-- dps alterar com código python para o BD -->
-            <p>{{ quemSomos.apresentacao }}</p>
+            <h4>{{ quemSomos.Titulo }}</h4> <!-- dps alterar com código python para o BD -->
+            <p>{{ quemSomos.oferecimento }}</p>
         
         </center>
     </section>
@@ -53,7 +51,7 @@
         <h4>{{servicos.nome}}</h4> <!-- dps alterar com código python para o BD -->
         <p>{{servicos.descrição_do_servico}}</p> <!-- dps alterar com código python para o BD -->
         <p>Custo do serviço</p>
-        <p>{{servicos.preço}}</p></center>
+        <p>{{servicos.preco_servico}}</p></center>
         {% endfor %}
     </section>
 
@@ -72,11 +70,10 @@
     
     <section id = "contatos" >
         <center><h3>Contatos</h3></center> <!-- dps alterar com código python para o BD -->
-        {% for contatos in contato %}
-        <center><p>Email: {{ contatos.email }}</p> <!-- dps alterar com código python para o BD -->
-                <p>Celular: {{ contatos.celular }}</p> <!-- dps alterar com código python para o BD -->
-                <p>Telefone: {{ contatos.telefone }}</p></center> <!-- dps alterar com código python para o BD -->
-        {% endfor %}
+            <center><p>Email: </p> <!-- dps alterar com código python para o BD -->
+                <p>Celular: </p> <!-- dps alterar com código python para o BD -->
+                <p>Telefone: </p></center> <!-- dps alterar com código python para o BD -->
+        
     </section>
 
     <br>

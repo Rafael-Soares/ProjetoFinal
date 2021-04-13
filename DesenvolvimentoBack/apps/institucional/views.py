@@ -3,19 +3,20 @@ from .models import * #esse asteristíco importa todas as classes do models
 
 #RECUPERANDO VALORES DAS MODELS
 def index(request):
+    Home = home.objects.last()
     Quem_Somos = quemSomos.objects.last()
-    Contato = contato.objects.all()
     Servico = servicos.objects.all()
     Portifolio = portifolio.objects.all()
-    Painel = painel.objects.all()
+    pacotinho = pacotes.objects.all()
+    
 
 #PASSANDO VALORES PARA UM DICIONÁRIO
     dados = { 
+        'Home': Home,
         'quemSomos' : Quem_Somos,
-        'contato': Contato,
         'servico': Servico,
         'portifolio': Portifolio,
-        'painel': Painel
+        'paco': pacotinho
     }
 
     return render(request, 'index.html', dados)

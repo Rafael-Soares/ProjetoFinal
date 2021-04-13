@@ -67,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'aprender_e_crescer',
         'USER': 'postgres',
-        'PASSWORD': '15022001ke', # SENHAS ->  KEDSON -> 15022001ke    RAFAEL ->  treineeEject
+        'PASSWORD': 'treineeEject', # SENHAS ->  KEDSON -> 15022001ke    RAFAEL ->  treineeEject
         'HOST': 'localhost'
     }
 }
