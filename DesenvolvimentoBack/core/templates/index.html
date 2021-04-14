@@ -15,15 +15,15 @@
             <a href=#pacotes id="cardlink1">Saiba mais sobre esse plano</a>
             <a href="{% url 'notfound' %}" class="cardlink2">Começar agora</a>
         </div>
-
     </section>
+
         <section id="quemsomos" class="quemsomos"><!--QUEM SOMOS-->
             <div class="item1"><p>QUEM SOMOS</p></div>
         <div class="qs">
             <div class="item" id="item2">
                 <img src="{% static 'Imagens/iconee.svg' %}" alt="" width="80px">
                 <h2>O que oferecemos:</h2>
-                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                <p>{{ quemSomos.oferecimento }}</p>
             </div>
             <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="imagem">
             <div class="item" id="item3">
@@ -192,12 +192,19 @@
             <div>
                 <img src="{% static 'Imagens/map.svg' %}" alt="">
                 <div>
-                <div><h3>Contate-nos</h3></div>
-                <div><p>NOME</p><p>TELEFONE</p></div>
+                    <form action="" method="post">
+                        <div><h3>Contate-nos</h3></div>
+                        {% csrf_token %}
+                        {% for formulario in form %}
+                            {{ formulario }}
+                        {% endfor %}
+                        <input type="submit" value="ENVIAR">
+                    </form>
+                <!--<div><p>NOME</p><p>TELEFONE</p></div>
                 <div><p>E-MAIL</p></div>
                 <div><p>ASSUNTO</p></div>
                 <div><p>MENSSAGEM</p></div>
-                <div><p>ENVIAR</p></div>
+                <div><p>ENVIAR</p></div>-->
                 </div>
             </div>
             </section><!--FIM DE CONTATOS-->
@@ -208,6 +215,4 @@
                 <img src="{% static 'Imagens/facebook-square-brands 1 (1).svg' %}" alt="">
                 <img src="{% static 'Imagens/instagram-square-brands 1.svg' %}" alt="">
             </footer>
-    </body>
-</html>
 {% endblock %}
