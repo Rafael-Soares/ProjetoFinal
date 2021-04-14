@@ -1,15 +1,14 @@
-<!-- estendendo a base -->
-{% extends 'base.html' %}
+{% extends 'base.html'%}        
 {% load static %}
-{% block content %}
 
-{% include 'partials/menu.html' %}
+{% block content %}
+        
+        {% include 'partials/menu.html' %}
         <section id="notfound"><!--aviso-->
             <div style="display: flex; flex-direction: row;" id="t1"><p style="margin-right: 10px;">Not found</p><p style="color: #642E3D;">404</p></div>
             <h3 id="t2">Página em crescimento</h3>
             <img src="{% static 'Imagens/exclamation-triangle-solid 1.svg' %}" alt="" width="20%">
             <img src="{% static 'Imagens/Frame (3).svg' %}" alt="" width="20%">
         </section>
-</html>
 
 {% endblock %}

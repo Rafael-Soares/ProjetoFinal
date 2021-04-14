@@ -1,46 +1,47 @@
-<!-- estendendo a base -->
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
 
-<!-- partial menu-->
-{% include 'partials/menu.html' %}
+
+      {% include 'partials/menu.html' %}  
      <section id="centro"><!--CARD EXPOSITIVO-->
         <!--<div><img src="Imagens/img1.png" alt="" width="100%"></div>-->
         <div class="cardhome">
             <img src="{% static 'Imagens/logocards.svg' %}" alt="">
             <h3>Aprender é crescer</h3>
-            <div id="textcard"><p style="font-size: 70%;">12X</p><strong><p>R$XX,xx</p></strong></div>
-            <p style="text-align: justify;">Curso extensivo, monitoria, video aulas exclusivas, simulados e bancos de questões na palma da sua mão. Vem crescer, vem aprender!</p>
+            <div id="textcard"><p style="font-size: 70%;">{{Home.quantidade_parcelas}}X</p><strong><p>R${{Home.preco_card}}</p></strong></div>
+            <p style="text-align: justify;">{{Home.descricao_card}}</p>
             <a href=#pacotes id="cardlink1">Saiba mais sobre esse plano</a>
             <a href="{% url 'notfound' %}" class="cardlink2">Começar agora</a>
         </div>
-    </section>
 
+    </section>
         <section id="quemsomos" class="quemsomos"><!--QUEM SOMOS-->
             <div class="item1"><p>QUEM SOMOS</p></div>
         <div class="qs">
             <div class="item" id="item2">
                 <img src="{% static 'Imagens/iconee.svg' %}" alt="" width="80px">
                 <h2>O que oferecemos:</h2>
-                <p>{{ quemSomos.oferecimento }}</p>
+                <p>{{quemSomos.oferecimento}}</p>
             </div>
             <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="imagem">
             <div class="item" id="item3">
                 <img src="{% static 'Imagens/iconem.svg' %}" alt="" width="80px">
                 <h2>O que fazemos:</h2>
-                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                <p>{{quemSomos.oque_fazemos}}</p>
             </div>
             <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="imagem"> 
             <div class="item" id="item4">
                 <img src="{% static 'Imagens/iconed.svg' %}" alt="" width="80px">
                 <h2>Valores:</h2>
-                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                <p>{{quemSomos.valores}}</p>
             </div>
         </div>
         </section><!--FIM DE QUEMSOMOS--> 
         
         <section class="servicos" id="serviços"><!--SERVIÇOS-->
+            <div id="titulos"><p id="titulo">SERVIÇOS</p></div>
             <div class="fixo">            
                 <img src="{% static 'Imagens/Background.png' %}" alt="" width="100%">
             </div>
@@ -55,35 +56,35 @@
               <ul>
                 <li>
                 <div class="carousel-cell">
-                    <img src="{% static 'Imagens/aula.svg' %}" alt="">
+                    <img src="{% static 'Imagens/aula.png' %}" alt="">
                     <h2>AULAS ONLINE</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
                 </div>
                </li>
                <li>
                 <div class="carousel-cell">
-                    <img src="{% static 'Imagens/simulados.svg' %}" alt="">
+                    <img src="{% static 'Imagens/simulados.png' %}" alt="">
                     <h2>SIMULADOS</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
                 </div>
                </li>
                <li>
                 <div class="carousel-cell">
-                    <img src="{% static 'Imagens/questoes.svg' %}" alt="">
+                    <img src="{% static 'Imagens/questoes.png' %}" alt="">
                     <h2>BANCO DE QUESTÕES</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
                 </div>
                </li>
                <li>
                 <div class="carousel-cell">
-                    <img src="{% static 'Imagens/monitoria.svg' %}" alt="">
+                    <img src="{% static 'Imagens/monitoria.png' %}" alt="">
                     <h2>MONITORIA</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
                 </div>
               </li>
               <li>
                 <div class="carousel-cell">
-                    <img src="{% static 'Imagens/aula.svg' %}" alt="">
+                    <img src="{% static 'Imagens/aula.png' %}" alt="">
                     <h2>VIDEO AULAS</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
                 </div>
@@ -117,7 +118,7 @@
                 <p>Nota do aluno</p>
                 <p>it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
             </div>
-            <div class="cardportifolio" style="filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5)); background: #FAFAFA; width: 15%; height: 290px; ">
+            <div class="cardportifolio" style="filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5)); background: #FAFAFA; width: 20%; height: 350px; ">
                 <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
                 <p>Nome do Aluno</p>
                 <p>Nota do aluno</p>
@@ -139,80 +140,75 @@
                     <h2>Escolha a melhor opção para o seu crescimento</h2>
                     <p>Pacotes que cabem na palma da mão e irão dar um impulso nos seus estudos</p>
                 </div>
+                {% for paco in paco %}
                 <div class="pacotecard">
-                   <p>Pacote de 6 meses</p>
-                   <div style="display: flex; flex-direction: row; align-items: flex-end;"><p>até</p><h3  style="color: yellow;">6x</h3><h1>R$XX,xx</h1></div>
+                   <p>{{paco.duracao_pacote}}</p>
+                   <div style="display: flex; flex-direction: row; align-items: flex-end;"><p>até</p><h3  style="color: rgb(250, 250, 140);">{{paco.quantidade_parcelas}}x</h3><h1>R${{paco.valor_parcela}}</h1></div>
                     <p>ou</p>
-                    <div style="display: flex; flex-direction: row;align-items: flex-end;"><p>a vista</p><h1>R$XX,xx</h1></div>
-                    <h2>-10%</h2>
+                    <div style="display: flex; flex-direction: row;align-items: flex-end;"><p>a vista</p><h1>R${{paco.valor_a_vista}}</h1></div>
+                    <h2>-{{paco.desconto}}%</h2>
                     <ul>
                         <li>Curso estensinvo</li>
                         <li>Video aulas exclusivas</li>
                         <li>Simulados</li>
                         <li>Banco de questões</li>
                     </ul>
-                    <a href="{% url 'notfound' %} "class="cardlink2">Comece agora</a>
+                    <a href="{% url 'notfound' %}" class="cardlink2">Comece agora</a>
                 </div>
-                <div class="pacotecard">
-                    <p>Pacote de 1 ano</p>
-                    <div style="display: flex; flex-direction: row; align-items: flex-end;"><p>até</p><h3 style="color: yellow;">12x</h3><h1>R$XX,xx</h1></div>
-                     <p>ou</p>
-                     <div style="display: flex; flex-direction:row; align-items: flex-end;"><p>à vista</p><h1>R$XX,xx</h1></div>
-                     <h2>-10%</h2>
-                     <ul>
-                         <li>Curso estensinvo</li>
-                         <li>Video aulas exclusivas</li>
-                         <li>Simulados</li>
-                         <li>Banco de questões</li>
-                     </ul>
-                     <a href="{% url 'notfound' %}" class="cardlink2">Comece agora</a>
-                </div>
+                 {% endfor %}   
             </div>
             </section><!--FIM DE Pacotes-->
 
             <section id="contatos"><!--CONTATOS-->
                 <p id="tc">CONTATOS</p>
             <div class="contatos">
+                <div class="gridin" style="margin-left: -40%;">
+                    <img src="{% static 'Imagens/local.svg' %}" alt="" class="icone">
+                    <h3 class="tt">LOCALIZAÇÃO</h3>
+                    <p class="texto">Rua x. Barco, 0000</p>
+                </div> 
                 <div class="gridin">
-                    <img src="{% static 'Imagens/local.svg' %}" alt="">
-                    <h3>LOCALIZAÇÃO</h3>
-                    <p>Rua x. Barco, 0000</p>
+                    <img src="{% static 'Imagens/telefone.svg' %}" alt="" class="icone">
+                    <h3 class="tt">TELEFONE</h3>
+                    <p class="texto">+55 (00) 91234-5678</p>
                 </div> 
-                <div>
-                    <img src="{% static 'Imagens/telefone.svg' %}" alt="">
-                    <h3>TELEFONE</h3>
-                    <p>+55 (00) 91234-5678</p>
-                </div> 
-                <div>
-                    <img src="{% static 'Imagens/email.svg' %}" alt="">
-                    <h3>E-MAIL</h3>
-                    <p>email@gmail.com</p>
+                <div class="gridin">
+                    <img src="{% static 'Imagens/email.svg' %}" alt="" class="icone">
+                    <h3 class="tt">E-MAIL</h3>
+                    <p class="texto">email@gmail.com</p>
                 </div> 
             </div>
-            <div>
-                <img src="{% static 'Imagens/map.svg' %}" alt="">
-                <div>
-                    <form action="" method="post">
-                        <div><h3>Contate-nos</h3></div>
-                        {% csrf_token %}
-                        {% for formulario in form %}
-                            {{ formulario }}
-                        {% endfor %}
-                        <input type="submit" value="ENVIAR">
+            <div class="wrapper" id="contatos2 ">
+                    <img src="{% static 'Imagens/map.svg' %}" alt="">
+                            <!-- CONTACT FORM -->
+                <div class="contact">
+                    <h3>Contate-nos</h3>
+                   <form id="contact-form"><!--Contact form-->
+
+                        <p>
+                            
+                            <input type="text" name="name" id="name" required placeholder="Nome">
+                        </p>
+                        <p>
+                            
+                            <input type="text" name="telefone" id="company" placeholder="Telefone">
+                        </p>
+                        <p class="full">
+                            <input type="email" name="email" id="email" required placeholder="E-mail">
+                        </p>
+                        <p class="full">
+                            
+                            <input type="text" name="assunto" id="phone" placeholder="Assunto">
+                        </p>
+                        <p class="full">
+                            <textarea name="message" rows="5" id="message" placeholder="Menssagem"></textarea>
+                        </p>
+                        <p class="full">
+                            <button type="submit">Enviar</button>
+                        </p>
                     </form>
-                <!--<div><p>NOME</p><p>TELEFONE</p></div>
-                <div><p>E-MAIL</p></div>
-                <div><p>ASSUNTO</p></div>
-                <div><p>MENSSAGEM</p></div>
-                <div><p>ENVIAR</p></div>-->
-                </div>
+                </div><!-- End #contact-form -->
             </div>
             </section><!--FIM DE CONTATOS-->
 
-            <footer><!--footer-->
-                <img src="{% static 'Imagens/logobranco.svg' %}" alt="">
-                <p>2021.1 Copyright © Todos os direitos reservados. Desenvolvido por EJECT</p>
-                <img src="{% static 'Imagens/facebook-square-brands 1 (1).svg' %}" alt="">
-                <img src="{% static 'Imagens/instagram-square-brands 1.svg' %}" alt="">
-            </footer>
 {% endblock %}
