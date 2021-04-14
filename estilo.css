@@ -1,6 +1,7 @@
 *{
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 /*Nomes*/
 .logo{ grid-area: logo;}
@@ -9,7 +10,12 @@
 .fixo{grid-area: fix}
 .tp{grid-area: tp;}
 .pacotes{grid-area: pacotes;}
-/* Large devices (laptops/desktops, 992px and up) */
+.icone{grid-area: icone;}
+.tt{grid-area: tt;}
+.texto{grid-area: texto;}
+
+
+/* Large devices (laptops/desktops, 1200px and up) */
 /*MENU*/
 .grid-navbar{
     position:static;
@@ -66,7 +72,7 @@ border-radius: 5px;
     border-radius: 50px;
     width: 220px;
     padding: 2%;
-    height: 380px;
+    height: 450px;
     grid-row-gap: 5%;
 }
 #textcard{
@@ -116,7 +122,7 @@ border-radius: 5px;
 .qs{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    margin:4% 8% 2% 12%
+    margin:4% 5% 2% 5%
 }
 .imagem{
     margin-top: 130px;
@@ -149,6 +155,9 @@ border-radius: 5px;
     padding-bottom: 10%;
 
 }
+#titulos{
+    color: #FAFAFA;
+}
 .carousel-cell{
     padding: 1%;
     text-align: center;
@@ -175,7 +184,8 @@ border-radius: 5px;
     display: flex;
     flex-direction:row;
     background-color: transparent;
-    padding: 10% 0 8% 13%;
+    padding: 10% 1% 8% 13%;
+    box-sizing: border-box;
 }
 #port{
     display: flex;
@@ -200,7 +210,8 @@ border-radius: 5px;
     flex-direction: column;
     align-items: center;
     padding: 3%;
-    width: 15%;
+    max-width: 20%;
+    min-width: 15%;
     margin-right: 10%;
     text-align: justify;
 }
@@ -223,7 +234,7 @@ border-radius: 5px;
     background-position-x: -30px;
     background-repeat: no-repeat;
     background-color: #FAFAFA;
-    margin-bottom: 5%;
+    padding-bottom: 5%;
 }
 #pacotes{
     display: flex;
@@ -291,10 +302,13 @@ margin-bottom: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 8%;
 }
 .contatos{
     display: flex;
     flex-direction: row;
+
+    margin: 2% 0% 2% 0%;
 }
 #tc{
 font-size: 250%;
@@ -305,26 +319,193 @@ text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 
 }
 .gridin{
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto auto auto;
+grid-template-areas: "icone tt"
+                     "icone texto";
+margin-right: 50%;
+
+}
+.tt{
+    color: #642E3D;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+.texto{
+    color: #8F5E6C;
+    display: flex;
+    align-items:flex-start;
+    margin-left: 5%;
+}
+
+/* ------- */
+/* CONTACT */
+/* ------- */
+
+.contact {
+    background: #fafafa;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+/*formulário e mapa*/
+  .wrapper {
+    display: flex;
+    box-sizing: border-box;
+    grid-template-columns: 2%;
+    flex-direction: row;
+  }
+  
+  .wrapper > * {
+    padding: 1em;
+  }
+
+  .wrapper img{width: 100%; margin-top: 10%;}
+/* ---- */
+/* FORM */
+/* ---- */
+
+.contact form {
     display: grid;
-    grid-template-areas:"icone titl"
-                        "icone tex" 
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 2%;
+  }
+  
+
+  .contact form p {
+    margin: 0;
+  }
+  .contact h3{
+      text-align: center;
+      color: #8F5E6C;
+      font-size: 150%;
+      margin-bottom: 2%;
+  }
+  .contact form .full {
+    grid-column: 1 / 3;
+  }
+  
+  .contact form button,
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: solid 1px #242424;
+    border-radius: 4px;
+    background-color: #8F5E6C;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #fafafa;
+ }
+
+  
+  .contact form textarea {
+    resize: none;
+  }
+  
+  .contact form button {
+    background: #27BA81;
+    border: 0;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .contact form button:hover,
+  .contact form button:focus {
+    border:solid;
+    background: #fafafa;
+    border-color: #27BA81;
+    border-width: 1px;
+    color: #27BA81;
+    outline: 0;
+    transition: background-color 0.5s ease-out;
+  }
+  .contact form input:hover,
+  .contact form input:focus,
+  .contact form textarea:hover,
+  .contact form textarea:focus{
+    border:solid;
+    background: #8f5e6c77;
+    border-color: #fafafa;
+    border-width: 1px;
+    outline: 0;
+    transition: background-color 0.5s ease-out;
+  }
+
+/*RODAPE*/
+#rodape{
+    background-color: #642E3D;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    color: #fafafa;
 }
-.icone{grid-area: icone;}
-.titl{grid-area: titl;}
-.tex{grid-area:tex}
+#rodape img{
+    width: 10%;
+    margin-left: 5%;
+}
+#rodimg{width: 15%;}
 
-    
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 1200px) {
+/*CONTATOS*/
+    .gridin{
+        margin-right: 10%;
+    }
+    .contatos{
+        margin-left: 40%;
+    }
+/*SERVIÇOS*/
+    .fixo img{ display: none;}
+    #titulos{
+        font-size: 150%;
+        color: #fafafa;
+        grid-area: titulos;
+        background-color: #642E3D;
+    }
+    .servicos{
+        display: grid;
+        grid-template-areas: "titulos""carousel";
+        background-color: #FAFAFA;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        text-align: center;
+        
+}
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (max-width: 1060px) {
+    /*portifolio, serviços e quem somos*/
+  
+}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
 
 
+
+@media only screen and (min-width: 700px) {
+/*Rodape, contatos, portifolio, serviços e menu*/
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .wrapper > * {
+      padding: 2em;
+    }
+  
+    .company-info {
+      border-radius: 4px 0 0 4px;
+    }
+  
+    .contact {
+      border-radius: 0 4px 4px 0;
+    }
+}
