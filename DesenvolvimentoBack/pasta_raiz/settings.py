@@ -67,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'aprender_e_crescer',
         'USER': 'postgres',
-        'PASSWORD': '15022001ke', # SENHAS ->  KEDSON -> 15022001ke    RAFAEL ->  treineeEject
+        'PASSWORD': 'treineeEject', # SENHAS ->  KEDSON -> 15022001ke    RAFAEL ->  treineeEject
         'HOST': 'localhost'
     }
 }
@@ -125,7 +125,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "aprenderecrescer30@gmail.com"
-EMAIL_HOST_PASSWORD = "treineeEject"
+EMAIL_HOST_PASSWORD = "bfutrtgcdhfajjrj"
 CONTACT_EMAIL = "aprenderecrescer30@gmail.com"
 DEFAULT_FROM_EMAIL = "aprenderecrescer30@gmail.com"
 

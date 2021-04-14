@@ -1,8 +1,8 @@
 # para instalar as dependências é necessário que execute o seguinte comando: pip install -r requirements.txt
 
-Django~=2.2.4   # INSTALAÇÃO DO DJANGO
-Pillow          # PARA UTILIZAR O IMAGEFIELD
-pylint          # UTILIZADO PARA VERICAÇÃO DE ERROS
-pylint-django   # UTILIZADO PARA VERICAÇÃO DE ERROS
-psycopg2        # PARA COMUNICAÇÃO COM POSTGRESQL
-psycopg2-binary # PARA COMUNICAÇÃO COM POSTGRESQL
+Django==2.2.4   # INSTALAÇÃO DO DJANGO
+Pillow==8.2.0          # PARA UTILIZAR O IMAGEFIELD
+pylint==2.7.4          # UTILIZADO PARA VERICAÇÃO DE ERROS
+pylint-django==2.4.3    # UTILIZADO PARA VERICAÇÃO DE ERROS
+psycopg2==2.8.6        # PARA COMUNICAÇÃO COM POSTGRESQL
+psycopg2-binary==2.8.6  # PARA COMUNICAÇÃO COM POSTGRESQL
