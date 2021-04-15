@@ -112,12 +112,14 @@
         <section id="port"><!--PORTIFÓLIO DE ALUNOS-->
         <p id="titulo">VENHA SER COMO ELES</p>
         <div id="portifolio">
-            <div  class="cardportifolio" style="filter: drop-shadow(-8px 10px 4px rgba(0, 0, 0, 0.5));">
-                <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
-                <p>Nome do Aluno</p>
-                <p>Nota do aluno</p>
-                <p>it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-            </div>
+            {% for aluno in portifolio %}
+                <div  class="cardportifolio" style="filter: drop-shadow(-8px 10px 4px rgba(0, 0, 0, 0.5));">
+                    <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
+                    <p>{{aluno.nome}}</p>
+                    <p><strong>Nota</strong>:{{aluno.nota}}</p>
+                    <p>{{aluno.descricaoPortifolio}}</p>
+                </div>
+            {% endfor %}
             <div class="cardportifolio" style="filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5)); background: #FAFAFA; width: 20%; height: 350px; ">
                 <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
                 <p>Nome do Aluno</p>
@@ -148,6 +150,7 @@
                     <div style="display: flex; flex-direction: row;align-items: flex-end;"><p>a vista</p><h1>R${{paco.valor_a_vista}}</h1></div>
                     <h2>-{{paco.desconto}}%</h2>
                     <ul>
+                        <li>Curso estensinvo</li>
                         <li>Curso estensinvo</li>
                         <li>Video aulas exclusivas</li>
                         <li>Simulados</li>
@@ -183,25 +186,25 @@
                             <!-- CONTACT FORM -->
                 <div class="contact">
                     <h3>Contate-nos</h3>
-                   <form id="contact-form"><!--Contact form-->
-
-                        <p>
-                            
-                            <input type="text" name="name" id="name" required placeholder="Nome">
+                   <form id="contact-form" action="{% url 'index' %}" method="POST"><!--Contact form-->
+                        {% csrf_token %}
+                        <p> 
+                            {{form.nome}}
                         </p>
                         <p>
-                            
-                            <input type="text" name="telefone" id="company" placeholder="Telefone">
+                            {{form.telefone}}
                         </p>
                         <p class="full">
-                            <input type="email" name="email" id="email" required placeholder="E-mail">
+                            {{form.email}}
+                        </p>                       
+                        <p class="full">
+                            {{form.Assunto}}
+                        </p> 
+                        <p class="full">
+                            {{form.assunto}}
                         </p>
                         <p class="full">
-                            
-                            <input type="text" name="assunto" id="phone" placeholder="Assunto">
-                        </p>
-                        <p class="full">
-                            <textarea name="message" rows="5" id="message" placeholder="Menssagem"></textarea>
+                            {{form.mensagem}}
                         </p>
                         <p class="full">
                             <button type="submit">Enviar</button>

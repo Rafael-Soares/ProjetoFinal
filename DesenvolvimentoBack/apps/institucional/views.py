@@ -31,6 +31,7 @@ def index(request):
         'paco': pacotinho,
         'form': form
     }
+
     return render(request, 'index.html', context)
 
 def notfound(request):
