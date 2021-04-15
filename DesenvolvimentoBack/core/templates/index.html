@@ -7,7 +7,7 @@
       {% include 'partials/menu.html' %}  
      <section id="centro"><!--CARD EXPOSITIVO-->
         <!--<div><img src="Imagens/img1.png" alt="" width="100%"></div>-->
-        <div class="cardhome">
+        <div id="cardhome">
             <img src="{% static 'Imagens/logocards.svg' %}" alt="">
             <h3>Aprender é crescer</h3>
             <div id="textcard"><p style="font-size: 70%;">{{Home.quantidade_parcelas}}X</p><strong><p>R${{Home.preco_card}}</p></strong></div>
@@ -25,13 +25,13 @@
                 <h2>O que oferecemos:</h2>
                 <p>{{quemSomos.oferecimento}}</p>
             </div>
-            <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="imagem">
+            <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="vetor">
             <div class="item" id="item3">
                 <img src="{% static 'Imagens/iconem.svg' %}" alt="" width="80px">
                 <h2>O que fazemos:</h2>
                 <p>{{quemSomos.oque_fazemos}}</p>
             </div>
-            <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="imagem"> 
+            <img src="{% static 'Imagens/Line 2.svg' %}" alt="" height="50%" class="vetor"> 
             <div class="item" id="item4">
                 <img src="{% static 'Imagens/iconed.svg' %}" alt="" width="80px">
                 <h2>Valores:</h2>
@@ -77,20 +77,12 @@
                         <label for="slides_{{slides.id}}"></label>
                     {% endfor %}
               </div>
-              <div class="navigation">
-                  <div>
-                    <label for="slides_{{servico1.id}}"></label>
-                    {% for slides in servico %}
-                        <label for="slides_{{slides.id}}"></label>
-                    {% endfor %}
-                  </div>
-                </div>
             </div>
         </section><!--FIM DE SERVIÇOS-->
 
         <section id="port"><!--PORTIFÓLIO DE ALUNOS-->
         <p id="titulo">VENHA SER COMO ELES</p>
-        <div id="portifolio">
+        <div class="portifolio">
             <div  class="cardportifolio" style="filter: drop-shadow(-8px 10px 4px rgba(0, 0, 0, 0.5));">
                 <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
                 <p>{{id1.nome}}</p>
@@ -122,12 +114,11 @@
                 {% for paco in paco %}
                 <div class="pacotecard">
                    <p>{{paco.duracao_pacote}}</p>
-                   <div style="display: flex; flex-direction: row; align-items: flex-end;"><p>até</p><h3  style="color: rgb(250, 250, 140);">{{paco.quantidade_parcelas}}x</h3><h1>R${{paco.valor_parcela}}</h1></div>
+                   <div style="display: flex; flex-direction: row; align-items: flex-end;"><p>até</p><h3  style="color: yellow;">{{paco.quantidade_parcelas}}x</h3><h1>R${{paco.valor_parcela}}</h1></div>
                     <p>ou</p>
                     <div style="display: flex; flex-direction: row;align-items: flex-end;"><p>a vista</p><h1>R${{paco.valor_a_vista}}</h1></div>
                     <h2>-{{paco.desconto}}%</h2>
                     <ul>
-                        <li>Curso estensinvo</li>
                         <li>Curso estensinvo</li>
                         <li>Video aulas exclusivas</li>
                         <li>Simulados</li>
@@ -177,9 +168,6 @@
                         <p class="full">
                             {{form.email}}
                         </p>                       
-                        <p class="full">
-                            {{form.Assunto}}
-                        </p> 
                         <p class="full">
                             {{form.assunto}}
                         </p>
