@@ -63,9 +63,8 @@ WSGI_APPLICATION = 'pasta_raiz.wsgi.application'
 
 DATABASES = {
     'default': {
-        #BANCO SQLITE3
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '../db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
