@@ -156,7 +156,7 @@
                     <h3>Contate-nos</h3>
                    <form id="contact-form" action="{% url 'index' %}" method="POST"><!--Contact form-->
                         {% if mensagem %}
-                            <script>alert("Foi enviado man")</script>
+                            <script>alert("E-mail enviado com sucesso!")</script>
                         {% endif %}
                         {% csrf_token %}
                         <p> 

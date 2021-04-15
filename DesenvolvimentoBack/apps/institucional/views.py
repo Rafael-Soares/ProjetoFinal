@@ -7,16 +7,16 @@ from .models import * #esse asteristíco importa todas as classes do models
 def index(request):
     Home = home.objects.last()
     Quem_Somos = quemSomos.objects.last()
-    #Servico = servicos.objects.all()
     servicosAll = servicos.objects.all()[1:]
     Portifolio = portifolio.objects.all()
     pacotinho = pacotes.objects.all()
     servicos1 = servicos.objects.first()
     message = False
 
-    id1 = Portifolio.get(id=1)
-    id2 = Portifolio.get(id=2)
-    id3 = Portifolio.get(id=3)
+# Objetos específicos que ficam nos cards do portifólio
+    id1 = Portifolio.get(id=2)
+    id2 = Portifolio.get(id=3)
+    id3 = Portifolio.get(id=4)
 
     context = {}
 
@@ -44,12 +44,6 @@ def index(request):
         'mensagem': message
     }
 
-#    for x in Portifolio:
-#        if (x.id % 2 == 0):
-#            context['par'] = True
-#        else:
-#            context['impar']  = True
-  
     return render(request, 'index.html', context)
 
 def notfound(request):
