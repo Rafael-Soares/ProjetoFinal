@@ -14,9 +14,6 @@ def index(request):
     servicos1 = servicos.objects.first()
     message = False
 
-    print(servicosAll)
-    print(servicos1)
-
     id1 = Portifolio.get(id=1)
     id2 = Portifolio.get(id=2)
     id3 = Portifolio.get(id=3)
