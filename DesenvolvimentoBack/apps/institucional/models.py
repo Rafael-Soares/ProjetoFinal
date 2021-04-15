@@ -14,7 +14,7 @@ class quemSomos(models.Model):
     data_modificacao = models.DateTimeField('Data de modificação', default=datetime.now, blank=True)
 
 class servicos(models.Model):
-    logo_servico = models.ImageField('Logo do serviço', upload_to='imagens/', blank=True)
+    logoServico = models.ImageField('Logo do serviço', upload_to='imagens/', blank=True)
     nome = models.CharField('Nome do serviço', max_length=50, blank=True)
     descrição_do_servico = models.TextField('Descrição', blank=True)
     data_modificacao = models.DateTimeField('Data de modificação', default=datetime.now, blank=True)

@@ -48,89 +48,66 @@
             
             <div class="carousel" >
             <div id="slider1" class="csslider infinity inside">
-              <input type="radio" name="slides" id="slides_1" checked />
-              <input type="radio" name="slides" id="slides_2" />
-              <input type="radio" name="slides" id="slides_3" />
-              <input type="radio" name="slides" id="slides_4" />
-              <input type="radio" name="slides" id="slides_5" />
+                <input type="radio" name="slides" id="slides_{{servico1.id}}" checked/>
+                {% for slides in servico %}
+                        <input type="radio" name="slides" id="slides_{{slides.id}}"/>
+                {% endfor %}
               <ul>
-                <li>
-                <div class="carousel-cell">
-                    <img src="{% static 'Imagens/aula.png' %}" alt="">
-                    <h2>AULAS ONLINE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                </div>
-               </li>
-               <li>
-                <div class="carousel-cell">
-                    <img src="{% static 'Imagens/simulados.png' %}" alt="">
-                    <h2>SIMULADOS</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                </div>
-               </li>
-               <li>
-                <div class="carousel-cell">
-                    <img src="{% static 'Imagens/questoes.png' %}" alt="">
-                    <h2>BANCO DE QUESTÕES</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                </div>
-               </li>
-               <li>
-                <div class="carousel-cell">
-                    <img src="{% static 'Imagens/monitoria.png' %}" alt="">
-                    <h2>MONITORIA</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                </div>
-              </li>
-              <li>
-                <div class="carousel-cell">
-                    <img src="{% static 'Imagens/aula.png' %}" alt="">
-                    <h2>VIDEO AULAS</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                </div>
-              </li>
-              </ul>
+                    <li>
+                        <div class="carousel-cell">
+                            <img src="{{ servico1.logoServico.url }}" alt="">
+                            <h2>{{servico1.nome}}</h2>
+                            <p>{{servico1.descrição_do_servico}}</p>
+                    </div>
+                    </li>    
+                  {% for slides in servico %}
+                    <li>
+                        <div class="carousel-cell">
+                            <img src="{{ slides.logoServico.url }}" alt="">
+                            <h2>{{slides.nome}}</h2>
+                            <p>{{slides.descrição_do_servico}}</p>
+                        </div>
+                   </li>    
+                  {% endfor %}
+                </ul>
+
                 <div class="arrows">
-                  <label for="slides_1"></label>
-                  <label for="slides_2"></label>
-                  <label for="slides_3"></label>
-                  <label for="slides_4"></label>
-                  <label for="slides_5"></label>
+                    <label for="slides_{{servico1.id}}"></label>
+                    {% for slides in servico %}
+                        <label for="slides_{{slides.id}}"></label>
+                    {% endfor %}
               </div>
               <div class="navigation">
                   <div>
-                      <label for="slides_1"></label>
-                      <label for="slides_2"></label>
-                      <label for="slides_3"></label>
-                      <label for="slides_4"></label>
-                      <label for="slides_5"></label>
+                    <label for="slides_{{servico1.id}}"></label>
+                    {% for slides in servico %}
+                        <label for="slides_{{slides.id}}"></label>
+                    {% endfor %}
                   </div>
-            </div>
+                </div>
             </div>
         </section><!--FIM DE SERVIÇOS-->
 
         <section id="port"><!--PORTIFÓLIO DE ALUNOS-->
         <p id="titulo">VENHA SER COMO ELES</p>
         <div id="portifolio">
-            {% for aluno in portifolio %}
-                <div  class="cardportifolio" style="filter: drop-shadow(-8px 10px 4px rgba(0, 0, 0, 0.5));">
-                    <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
-                    <p>{{aluno.nome}}</p>
-                    <p><strong>Nota</strong>:{{aluno.nota}}</p>
-                    <p>{{aluno.descricaoPortifolio}}</p>
-                </div>
-            {% endfor %}
+            <div  class="cardportifolio" style="filter: drop-shadow(-8px 10px 4px rgba(0, 0, 0, 0.5));">
+                <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
+                <p>{{id1.nome}}</p>
+                <p><strong>Nota</strong>:{{id1.nota}}</p>
+                <p>{{id1.descricaoPortifolio}}</p>
+            </div>
             <div class="cardportifolio" style="filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.5)); background: #FAFAFA; width: 20%; height: 350px; ">
                 <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
-                <p>Nome do Aluno</p>
-                <p>Nota do aluno</p>
-                <p>it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                <p>{{id2.nome}}</p>
+                <p><strong>Nota</strong>:{{id2.nota}}</p>
+                <p>{{id2.descricaoPortifolio}}</p>
             </div>
             <div class="cardportifolio" style="filter: drop-shadow(8px 10px 4px rgba(0, 0, 0, 0.5));">
                 <img src="{% static 'Imagens/iconeperfil.svg' %}" alt="">
-                <p>Nome do Aluno</p>
-                <p>Nota do aluno</p>
-                <p>it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                <p>{{id3.nome}}</p>
+                <p><strong>Nota</strong>:{{id3.nota}}</p>
+                <p>{{id3.descricaoPortifolio}}</p>
             </div>
         </div>
         </section><!--FIM DE PORTIFÓLIO DE ALUNOS-->
@@ -187,6 +164,9 @@
                 <div class="contact">
                     <h3>Contate-nos</h3>
                    <form id="contact-form" action="{% url 'index' %}" method="POST"><!--Contact form-->
+                        {% if mensagem %}
+                            <script>alert("Foi enviado man")</script>
+                        {% endif %}
                         {% csrf_token %}
                         <p> 
                             {{form.nome}}
