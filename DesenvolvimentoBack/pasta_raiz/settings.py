@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-z4hz*%6nxpojj3^w4s735#q3wiyke62w(ldk@7u1uks_@y%y04
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cursoaprenderecrescer.pythonanywhere.com']
 
 
 # Application definition
