@@ -365,7 +365,7 @@ margin-right: 50%;
   .wrapper > * {
     padding: 1em;
   }
-
+ .map{margin-left: -10%;}
   .wrapper img{width: 50%;}
 /* ---- */
 /* FORM */
