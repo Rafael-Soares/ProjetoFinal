@@ -229,7 +229,7 @@ border-radius: 5px;
 }
 /*PACOTES*/
 
-#pacote{
+#section-pacotes{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 20% 80%;
@@ -302,7 +302,7 @@ margin-bottom: 2%;
     margin-bottom: 1%;
 }
 /*CONTATOS*/
-#contatos{
+#tc{
     background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
@@ -315,7 +315,7 @@ margin-bottom: 2%;
 
     margin: 2% 0% 2% 0%;
 }
-#tc{
+#contatos{
 font-size: 250%;
 font-family: Roboto;
 font-style: normal;
