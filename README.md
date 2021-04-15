@@ -16,5 +16,3 @@ Tabela de conteúdos
       * [Combo](#combo)
    * [Tecnologias](#tecnologias)
 <!--te-->
-
-<p id="Sobre">Esse projeto foi feito para conclusão de um Trainee da EJECT.....</p>
